@@ -1,0 +1,42 @@
+<div *ngIf="showComponent">
+  <h1 class="h3 mb-4 text-gray-800 text-center">Playing Video</h1>
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary text-center">{{url}}</h6>
+        </div>
+        <div class="card-body">
+          <div class="text-center">
+            <iframe [src]="url | safe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+
+          </div>
+          <!-- <iframe
+            [src]="transform(url)"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  <!-- <vg-player>
+      <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+          <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+      </video>
+  </vg-player> -->
+
+  <!-- <iframe
+  src="https://player.vimeo.com/video/197933516"
+  frameborder="0"
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen
+></iframe> -->
+</div>
